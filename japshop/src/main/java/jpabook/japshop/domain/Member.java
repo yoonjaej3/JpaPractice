@@ -2,11 +2,10 @@ package jpabook.japshop.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.tomcat.jni.Address;
+
 
 
 import javax.persistence.*;
-import javax.persistence.criteria.Order;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,9 +19,9 @@ public class Member {
 
     private String name;
 
-    @Embedded
-    private Address address;
-
-    @OneToMany(mappedBy = "member")
-    private List<Order> orders = new ArrayList<>();
+//    @Embedded
+//    private Address address;
+//
+//    @OneToMany(mappedBy = "member")
+//    private List<Order> orders = new ArrayList<>();
 }

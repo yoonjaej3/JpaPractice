@@ -1,6 +1,6 @@
 package jpabook.japshop.service;
 
-import jpabook.japshop.domain.Member;
+import jpabook.japshop.domain.item.Member;
 import jpabook.japshop.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

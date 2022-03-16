@@ -1,8 +1,8 @@
-package jpabook.japshop.domain;
+package jpabook.japshop.domain.item;
 
+import jpabook.japshop.domain.Order;
 import lombok.Getter;
 import lombok.Setter;
-
 
 
 import javax.persistence.*;
@@ -19,9 +19,10 @@ public class Member {
 
     private String name;
 
-//    @Embedded
-//    private Address address;
-//
-//    @OneToMany(mappedBy = "member")
-//    private List<Order> orders = new ArrayList<>();
+
+    @Embedded
+    private Address address;
+
+    @OneToMany(mappedBy = "member")
+    private List<Order> orders = new ArrayList<>();
 }

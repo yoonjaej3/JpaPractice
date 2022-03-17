@@ -1,9 +1,10 @@
 package jpabook.japshop.domain.item;
 
-import jdk.jfr.Category;
+
+import jpabook.japshop.domain.Category;
 import jpabook.japshop.domain.NotEnoughStockException;
 import lombok.Getter;
-import org.springframework.data.annotation.Id;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import java.util.List;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="dtype")
-@Getter
+@Getter @Setter
 public class Item {
 
     @Id
